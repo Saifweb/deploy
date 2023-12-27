@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: register-app
-          image: saifbenhmida1420/java_app:latest
+          image: saifbenhmida1420/java_app:1.0.0-22
           imagePullPolicy: Always
           resources:
             limits:
