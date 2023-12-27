@@ -1,4 +1,3 @@
-##
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,6 +15,7 @@ spec:
       containers:
         - name: register-app
           image: saifbenhmida1420/java_app:latest
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "256Mi"
