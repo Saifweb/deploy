@@ -20,11 +20,12 @@ pipeline{
                 }
         }
         // Update the Deployement Tags
-        stage("Checkout from the SCM"){
+        stage("Update Deployement Tag"){
             steps{
                 sh """
-                    cat deployement.yaml
-
+                    cat deployment.yaml
+                    sed -i 's/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g' deployment.yaml
+                    cat deployment.yaml
                    """
                 }
         }
